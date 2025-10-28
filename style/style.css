@@ -266,7 +266,7 @@ text-transform: uppercase;
 .diamond {
   width: 330px;
   height: 310px;
-  background: url("/image/4.jpg") center/cover;
+  background: url(/image/4.jpg) center/cover;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   animation: float 6s infinite ease-in-out;
@@ -277,7 +277,7 @@ text-transform: uppercase;
   position: absolute;
   top: -150px;
   right: -60px;
-  background: url("/image/182135984_100778968853931_4121525248137264380_n.jpg") center/cover;
+  background: url(/image/182135984_100778968853931_4121525248137264380_n.jpg) center/cover;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   
@@ -288,7 +288,7 @@ text-transform: uppercase;
   position: absolute;
   bottom: -200px;
   right: -50px;
-  background: url("/image/pexels-michael-burrows-7125583.jpg") center/cover;
+  background: url(/image/pexels-michael-burrows-7125583.jpg) center/cover;
  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   
@@ -297,10 +297,37 @@ text-transform: uppercase;
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
 }
+@media (max-width: 768px) {
+
+  .diamonds {
+    width: 120px;
+    height: 100px;
+    top: 160px;
+    right: 10%; /* right side */
+  }
+  .diamond {
+    width: 120px;
+    height: 100px;
+    top: 0;
+    left: 40%; /* left side */
+  }
+
+  .diamondsmall {
+    width: 120px;
+    height: 100px;
+    top: 320px;
+    left: 0%; /* center */
+    transform: translateX(-50%);
+  }
+
+  .image-side {
+    height: 150px; /* make container tall enough for all diamonds */
+  }
+}
 .poster-section {
   position: relative;
   height: 40vh; /* fixed height */
-background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)), url("http://localhost/Walin/image/pexels-michael-burrows-7125583.jpg") center/cover;
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)), url(/image/pexels-michael-burrows-7125583.jpg) center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -508,7 +535,7 @@ flex-direction: column;
   position: absolute;
   top: 50px;
   left: 100px;
-  background: url("/image/182135984_100778968853931_4121525248137264380_n.jpg") center/cover;
+  background: url(/image/182135984_100778968853931_4121525248137264380_n.jpg) center/cover;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   
@@ -519,7 +546,7 @@ flex-direction: column;
   position: absolute;
   top: 60px;
   right: -150px;
-  background: url("/image/pexels-michael-burrows-7125583.jpg") center/cover;
+  background: url(/image/pexels-michael-burrows-7125583.jpg) center/cover;
  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   
@@ -1092,7 +1119,7 @@ flex-direction: column;
   }
 
   .parallax-cover {
-    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url("http://localhost/Walin/image/1212.jpg");
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url(/image/1212.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -1146,7 +1173,7 @@ flex-direction: column;
     background-color: #a17033;
   }
   .subscription-section {
-    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url("http://localhost/Walin/image/bk3.jpg");
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url(/image/bk3.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -1242,12 +1269,12 @@ flex-direction: column;
     display: none;
     flex-direction: column;
     width: 100%;
-    height: 300px;
+    height: 220px;
     position: absolute;
-    top: 130px;
+    top: 90px;
     left: 0;
     border-radius: 12px;
-    background: linear-gradient(135deg, #000000, #434343);
+   background: linear-gradient(135deg, #0b1220, #1e293b);
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(30px); 
     text-align: center;
@@ -1283,7 +1310,7 @@ flex-direction: column;
     position: fixed; 
     top: 0;
     left: 0;
-background: linear-gradient(135deg, #000000, #434343);;
+background: linear-gradient(135deg, #0b1220, #1e293b);
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
@@ -1292,7 +1319,7 @@ background: linear-gradient(135deg, #000000, #434343);;
   }
 
   .hero{
-    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url("http://localhost/Walin/image/1.jpg");
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url(/image/1.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -1384,6 +1411,21 @@ height: 200px;
 .faq-answer {
   font-size: 1rem;
 }
+ .footer-container {
+    grid-template-columns: 1fr; /* stack sections vertically */
+    gap: 20px;
+  }
+
+  /* Hide unwanted sections on mobile */
+  .footer-section:first-child, /* Logo & Inspiration */
+  .footer-section:last-child { /* Social Media */
+    display: none;
+  }
+
+  /* Optional: center align remaining sections */
+  .footer-section {
+    text-align: center;
+  }
 }
 
 .gallery-section {
@@ -1457,7 +1499,7 @@ justify-content: center;
  
 }
 .product-sample{
-  background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url("http://localhost/Walin/image/bk8.jpg");
+  background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url(/image/bk8.jpg);
     background-size: cover;
   background-position: center;
   padding: 70px;

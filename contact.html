@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style.css"/>
     <script src="https://unpkg.com/scrollreveal"></script>
         <title>WALIN COFFEE</title>
         <link rel="stylesheet" href="/image/022 - Copy.png">
@@ -105,39 +105,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="address">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1393.4107802296814!2d38.724875167733565!3d8.957322377066752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b840ce91582d3%3A0x81735a6ae6d2310!2z4YqV4Y2L4Yi1IOGIteGIjeGKrSDhiIvhjY3hibYsIOGKoOGLsuGItSDhiqDhiaDhiaM!5e0!3m2!1sam!2set!4v1746803518838!5m2!1sam!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-<footer class="footer">
-        <div class="footer-content">
-            <div class="footer-column">
-                <img src="image/022.png" alt="Walin Coffee Logo" class="footer-logo">
-                <p class="tagline">Together in Every Sip – From Guji to the World.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="about.php">About Us</a></li>
-                    <li><a href="ourproduct.php">Our Product</a></li>
-                    <li><a href="getproduct.php">Get Sample</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p>Email: felmetademissie044@gmail.com</p>
-                <p>Phone: +251947348742</p>
-                <p>Phone: +251930004760</p>
-                <p>Address: Addis Ababa, Lideta, Ethiopia</p>
-                <div class="social-footer">
-                    <i class='bx bxl-facebook-circle'></i>
-                    <i class='bx bxl-instagram-alt'></i>
-                    <i class='bx bxl-tiktok'></i>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Walin Coffee Trading PLC. All rights reserved.</p>
-        </div>
-    </footer>
+ <footer class="amazing-footer">
+  <div class="footer-container">
+
+    <!-- Logo & Inspiration -->
+    <div class="footer-section">
+      <img src="image/Uraga.png" alt="UragaNet Logo" class="footer-logo" />
+      <p class="inspiration">"Brewing change from seed to cup – every bean tells a story."</p>
+    </div>
+
+    <!-- Book a Visit -->
+    <div class="footer-section visit">
+      <h4><i class='bx bx-calendar'></i> Book a Visit</h4>
+      <form>
+        <input type="date" name="visit-date" class="visit-date" />
+        <button type="submit" class="visit-btn">Reserve</button>
+      </form>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-section">
+      <h4><i class='bx bx-map'></i> Address</h4>
+      <p>Addis Ababa, Ethiopia</p>
+      <p><i class='bx bx-envelope'></i> info@uraganetcoffee.com</p>
+      <p><i class='bx bx-phone'></i> +251911593684</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section">
+      <h4><i class='bx bx-share-alt'></i> Connect With Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 UragaNet Coffee. All rights reserved.</p>
+  </div>
+</footer>
     <script>
     const menuIcon = document.getElementById('menu-icon');
     const navLinks = document.getElementById('nav-links');
