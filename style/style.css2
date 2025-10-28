@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body html{
+  background-color: #F4F0EC;
+  overflow-x: hidden; /* prevent body overflow */
+}
+/*home*/
+.baner{
+    width: 100%;
+    min-height: 100vh;
+}
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    justify-content: space-around;
+    align-items: center;
+    padding:0 10px;
+    width: 100%;
+    background: linear-gradient(135deg, #000000, #434343);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    font-family: 'Georgia', serif;
+  }
+  header .logo img {
+
+    height: 110px;
+   
+  }
+
+  
+  header i {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  header span{
+    font-size: 16px;
+  }
+  
+.icon{
+  display: flex;
+}
+  .icon .cart-icon{
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 15px 20px;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+   padding: 15px;
+}
+
+.nav-links a {
+  padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(rgba(0,0,0,0.55));
+    background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+   
+}
+
+.hero .content {
+   width: 50%;
+    margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   
+}
+.hero .content .descri{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35%;
+    align-items: center; 
+    gap: 15px;
+}
+.hero .content h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.hero .content .descri p{
+font-size: 20px;
+line-height: 2rem;
+text-transform: uppercase;
+}
+.content button{
+    width: 130px;
+    height: 50px;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, #6F4F37, #D2691E);
+    margin-top: 20px;
+    transition: all .3s ease-in-out;
+}
+.content button:hover{
+    color: black;
+    background: white;
+    transform: translateY(5px);
+
+}
+.social-icons {
+    margin-top: 23px;
+    display: flex;
+    flex-direction: row;
+   gap: 30px;
+    color: white;
+    font-size: 30px;
+    
+
+}
+
+.image-selectors {
+    position: absolute;
+    bottom: 20px;
+    left: 70%;
+    transform: translateX(-50%);
+    display: flex;
+   
+    gap: 15px;
+    z-index: 2;
+  }
+
+  .image-selectors img {
+    width: 180px;
+    height: 130px;
+    object-fit: cover;
+    filter: brightness(60%); 
+    background: linear-gradient(rgba(0,0,0,0.55));
+    border-radius: 6px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .image-selectors img:hover {
+    transform: scale(1.3);
+    border-color: #ffcb05;
+  }
+   .inspiration {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url("http://localhost/Walin/image/bk1.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+  
+  .quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .quote {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #ffffff;
+    max-width: 600px;
+  }
+  
+  .logo-inspiration {
+    width: 140px;
+    margin-top: 10px;
+  }
+  .map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:10px;
+  }
+.map img{
+  width: 60%;
+  height: 60%;
+  border-radius: 40px;
+
+}
+.map h2{
+  font-size: 2em; 
+  text-align:center; 
+  margin-top:10px;
+  margin-bottom: 10px;
+
+}

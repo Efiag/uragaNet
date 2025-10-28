@@ -1,0 +1,137 @@
+<?php
+session_start();
+
+// Database connection
+$conn = new mysqli("localhost", "root", "", "uraga_db");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch gallery images
+$result = $conn->query("SELECT * FROM gallery ORDER BY uploaded_at DESC");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UragaNet – Gallery</title>
+  <link rel="stylesheet" href="style/gallery.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+ <header>
+      <div class="logo">
+       <a href="home.php"><img src="image/uraga.png" alt="UragaNet Coffee Logo" /></a> 
+      </div>
+      <nav class="navbar">
+      <div class="nav-links">
+          <a href="home.php">Home</a>
+          <a href="about.php">About</a>
+          <a href="ourproduct.php">Our Product</a>
+          <a href="getproduct.php">Get Sample</a>
+          <a href="gallery.php">Gallery</a>
+          <a href="contact.php">Contact</a>
+      </div>
+    </nav>
+      <div class="icon">
+  
+<i class='bx bx-cart-download'><span>(<?= isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>)</span>
+</i>
+
+        <div class="cart-icon">
+          <i class='bx bx-menu menu-icon' onclick="toggleMenu()"></i>
+        </div>
+       
+       
+      </div>
+    </header>
+
+  <!-- ===== Gallery Section ===== -->
+  <section class="uraga-gallery">
+    <div class="ug-wrapper">
+
+      <!-- Heading -->
+      <section class="ug-header animate-on-scroll">
+        <span class="tag">UragaNet Moments</span>
+        <h2>From Farm to Cup – Our Story in Photos</h2>
+        <p>Explore the beauty of Guji—lush farms, careful processing, and the people who craft every cup.</p>
+      </section>
+
+      <!-- Filters -->
+      <div class="ug-filters animate-on-scroll" aria-label="Gallery filters">
+        <button class="active" data-filter="*"><i class='bx bx-grid-small'></i> All</button>
+        <button data-filter="farms"><i class='bx bx-leaf'></i> Farms</button>
+        <button data-filter="processing"><i class='bx bx-cog'></i> Processing</button>
+        <button data-filter="people"><i class='bx bx-user'></i> People</button>
+        <button data-filter="products"><i class='bx bx-coffee-togo'></i> Products</button>
+        <button data-filter="landscapes"><i class='bx bx-landscape'></i> Landscapes</button>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="ug-masonry animate-on-scroll" id="ugMasonry">
+        <?php if ($result->num_rows > 0): ?>
+          <?php while ($row = $result->fetch_assoc()): ?>
+            <figure class="ug-item <?= htmlspecialchars($row['category']) ?>" data-caption="<?= htmlspecialchars($row['caption']) ?>">
+              <img src="uploads/<?= htmlspecialchars($row['filename']) ?>" alt="<?= htmlspecialchars($row['caption']) ?>" loading="lazy">
+              <figcaption><i class='bx bx-image'></i> <?= htmlspecialchars($row['caption']) ?></figcaption>
+            </figure>
+          <?php endwhile; ?>
+        <?php else: ?>
+          <p>No images uploaded yet.</p>
+        <?php endif; ?>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="ug-lightbox" id="ugLightbox" aria-hidden="true">
+    <button class="ug-close" aria-label="Close"><i class='bx bx-x'></i></button>
+    <button class="ug-nav ug-prev" aria-label="Previous"><i class='bx bx-chevron-left'></i></button>
+    <img id="ugLightboxImg" alt="gallery large">
+    <div class="ug-caption" id="ugLightboxCap"></div>
+    <button class="ug-nav ug-next" aria-label="Next"><i class='bx bx-chevron-right'></i></button>
+  </div>
+
+<footer class="amazing-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <img src="images/Uraga.png" alt="UragaNet Logo" class="footer-logo" />
+      <p class="inspiration">"Brewing change from seed to cup – every bean tells a story."</p>
+    </div>
+    <div class="footer-section visit">
+      <h4><i class='bx bx-calendar'></i> Book a Visit</h4>
+      <form>
+        <input type="date" name="visit-date" class="visit-date" />
+        <button type="submit" class="visit-btn">Reserve</button>
+      </form>
+    </div>
+    <div class="footer-section">
+      <h4><i class='bx bx-map'></i> Address</h4>
+      <p>Addis Ababa, Ethiopia</p>
+      <p><i class='bx bx-envelope'></i> info@uraganetcoffee.com</p>
+      <p><i class='bx bx-phone'></i> +251911593684</p>
+    </div>
+    <div class="footer-section">
+      <h4><i class='bx bx-share-alt'></i> Connect With Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 UragaNet Coffee. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script/gallery.js"></script>
+</body>
+</html>
+
+<?php
+$conn->close();
+?>

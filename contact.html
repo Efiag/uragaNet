@@ -1,0 +1,169 @@
+
+<?php session_start(); ?>
+     
+      <?php
+// Handle form submission
+$message_sent = false;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Connect to your database
+    $conn = new mysqli("localhost", "root", "", "walin_coffee_db");
+    if ($conn->connect_error) {
+        die('Connection failed: ' . $conn->connect_error);
+    }
+
+    // Get form data safely
+    $name = $conn->real_escape_string($_POST['name'] ?? '');
+    $email = $conn->real_escape_string($_POST['email'] ?? '');
+    $message = $conn->real_escape_string($_POST['message'] ?? '');
+
+    // Insert into database
+    if (!empty($name) && !empty($email) && !empty($message)) {
+        $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $name, $email, $message);
+        if ($stmt->execute()) {
+            $message_sent = true;
+        }
+        $stmt->close();
+    }
+
+    $conn->close();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+        <title>WALIN COFFEE</title>
+        <link rel="stylesheet" href="/image/022 - Copy.png">
+      </head>
+</head>
+<body>
+<header>
+      <div class="logo">
+      <a href="home.php"><img src="image/022.png" alt="Walin Coffee Logo" width="50" /></a> 
+      </div>
+      <nav class="navbar">
+      <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="ourproduct.php">Our Product</a>
+          <a href="getproduct.html">Get Sample</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+      <div class="icon">
+      <i class='bx bx-cart-download'><span>(<?= isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>)</span>
+</i>
+
+        <div class="cart-icon">
+          <i class='bx bx-menu menu-icon' onclick="toggleMenu()"></i>
+        </div>
+       
+       
+      </div>
+    </header>
+
+
+<section class="contact-container">
+  <div class="contact-info">
+    <h2>Get in Touch</h2>
+    <p>Whether you're a partner, customer, or curious coffee lover — we’d love to hear from you!</p>
+    <div class="contact-details">
+      <p><i class='bx bx-envelope'></i> Dr. Gemechis Jilo</p>
+      <p><i class='bx bx-phone'></i> +251******** / +251*******</p>
+      <p><i class='bx bx-map'></i> Addis Ababa, koye, Ethiopia</p>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <?php if ($message_sent): ?>
+      <div class="success-message">
+        <p>✅ Thank you! Your message has been sent successfully.</p>
+      </div>
+    <?php endif; ?>
+
+    <form action="" method="post">
+      <h3>Send Us a Message</h3>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message <i class='bx bx-send'></i></button>
+    </form>
+  </div>
+</section>
+<div class="address">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1393.4107802296814!2d38.724875167733565!3d8.957322377066752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b840ce91582d3%3A0x81735a6ae6d2310!2z4YqV4Y2L4Yi1IOGIteGIjeGKrSDhiIvhjY3hibYsIOGKoOGLsuGItSDhiqDhiaDhiaM!5e0!3m2!1sam!2set!4v1746803518838!5m2!1sam!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <img src="image/022.png" alt="Walin Coffee Logo" class="footer-logo">
+                <p class="tagline">Together in Every Sip – From Guji to the World.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="ourproduct.php">Our Product</a></li>
+                    <li><a href="getproduct.php">Get Sample</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: felmetademissie044@gmail.com</p>
+                <p>Phone: +251947348742</p>
+                <p>Phone: +251930004760</p>
+                <p>Address: Addis Ababa, Lideta, Ethiopia</p>
+                <div class="social-footer">
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-tiktok'></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Walin Coffee Trading PLC. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+  
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+<script src="script/app.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+</body>
+</html>
+
+      
+      </body>
+      </html>
+      
+
+
+
+
+
+
+
+
+
+

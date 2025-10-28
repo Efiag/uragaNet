@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us - UragaNet Coffee</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/abot.css" />
+<script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="home.php"><img src="image/uraga.png" alt="UragaNet Coffee Logo" /></a>
+  </div>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="home.php">Home</a>
+      <a href="about.php">About</a>
+      <a href="ourproduct.php">Our Product</a>
+      <a href="getproduct.php">Get Sample</a>
+      <a href="gallery.php">Gallery</a>
+      <a href="contact.php">Contact</a>
+    </div>
+  </nav>
+  <div class="icon">
+    <i class='bx bx-cart-download'><span>(<?= isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>)</span></i>
+    <div class="cart-icon">
+      <i class='bx bx-menu menu-icon' onclick="toggleMenu()"></i>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="overlay">
+    <h1>About Us</h1>
+    <p>From the highlands of Guji to the world — quality, traceability, and sustainability in every cup.</p>
+  </div>
+</section>
+
+<!-- ===== Intro Split ===== -->
+<section class="intro">
+  <div class="container">
+    <div class="col text">
+      <span class="tag">Who We Are</span>
+      <h2>UragaNet Coffee Plantation & Export PLC</h2>
+      <p>
+        We are a grower and exporter rooted in the heart of Uraga, Guji Zone, Oromia, Ethiopia.
+        Our mission is simple yet powerful — to produce and export exceptional Ethiopian coffee
+        with full traceability, fair partnerships, and unwavering quality from farm to port.
+      </p>
+      <ul class="bullets">
+        <li><i class='bx bx-leaf'></i> Estate and partner-farmer lots across Uraga and nearby districts</li>
+        <li><i class='bx bx-cog'></i> Washed, Natural, Honey & Anaerobic coffee processing methods</li>
+        <li><i class='bx bx-shield-quarter'></i> Quality control from cherry selection to export</li>
+      </ul>
+      <div class="cta-row">
+        <a href="ourproduct.html" class="btn primary"><i class='bx bx-coffee-togo'></i> Explore Products</a>
+        <a href="getsample.html" class="btn ghost"><i class='bx bx-send'></i> Request Samples</a>
+      </div>
+    </div>
+
+    <div class="col media">
+      <div class="photo" aria-label="Coffee farm in Guji"></div>
+      <div class="stamp">
+        <i class='bx bx-map'></i>
+        <div>
+          <strong>Uraga, Guji</strong>
+          <span>Oromia, Ethiopia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stats / Counters ===== -->
+<section class="stats">
+  <div class="container">
+    <div class="stat animate-on-scroll">
+      <div class="num" data-target="12">0</div>
+      <div class="label">Years in Coffee</div>
+    </div>
+    <div class="stat animate-on-scroll">
+      <div class="num" data-target="6">0</div>
+      <div class="label">Processing Sites</div>
+    </div>
+    <div class="stat animate-on-scroll">
+      <div class="num" data-target="1800">0</div>
+      <div class="label">Partner Farmers</div>
+    </div>
+    <div class="stat animate-on-scroll">
+      <div class="num" data-target="87">0</div>
+      <div class="label">Average Cupping Score (SCA)</div>
+    </div>
+  </div>
+  <p class="note">*Wet and dry stations combined. +Seasonal average.</p>
+</section>
+
+<!-- ===== Processing Expertise ===== -->
+<section class="process">
+  <div class="container">
+    <section class="section-head animate-on-scroll">
+      <span class="tag">Processing Expertise</span>
+      <h2>From Harvest to Flavor</h2>
+      <p class="subtitle">At UragaNet Coffee, each process—from hand-picking to drying—is a careful craft that brings out Ethiopia’s finest flavors.</p>
+    </section>
+
+    <div class="grid">
+      <article class="p-card animate-on-scroll">
+        <div class="icon pill pill-was"><i class='bx bx-droplet'></i></div>
+        <h3>Washed</h3>
+        <p>Clean, bright, and floral — cherries are pulped, fermented for 12–72 hours, washed, and sun-dried on raised beds to achieve exceptional clarity and balance.</p>
+        <ul class="tags"><li>High clarity</li><li>Citrus</li><li>Floral</li></ul>
+      </article>
+
+      <article class="p-card animate-on-scroll">
+        <div class="icon pill pill-nat"><i class='bx bx-sun'></i></div>
+        <h3>Natural</h3>
+        <p>Fruit-forward and full-bodied — whole cherries are sun-dried before hulling, creating bold, wine-like flavors with a rich sweetness and deep aroma.</p>
+        <ul class="tags"><li>Berry</li><li>Wine-like</li><li>Rich body</li></ul>
+      </article>
+
+      <article class="p-card animate-on-scroll">
+        <div class="icon pill pill-hon"><i class='bx bx-heart'></i></div>
+        <h3>Honey</h3>
+        <p>Smooth, syrupy, and complex — beans dry with part of their mucilage intact, giving the cup a delicate sweetness, silky mouthfeel, and balanced acidity.</p>
+        <ul class="tags"><li>Sweet</li><li>Syrupy</li><li>Balanced</li></ul>
+      </article>
+
+      <article class="p-card animate-on-scroll">
+        <div class="icon pill pill-ana"><i class='bx bx-capsule'></i></div>
+        <h3>Anaerobic</h3>
+        <p>Innovative and vibrant — pulped beans ferment in sealed, oxygen-free tanks under controlled time and temperature, unlocking complex fruity and floral notes.</p>
+        <ul class="tags"><li>Experimental</li><li>Fruity</li><li>Vibrant</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Sustainability & Impact ===== -->
+<section class="impact">
+  <div class="container">
+    <section class="section-head animate-on-scroll">
+      <span class="tag">Sustainability</span>
+      <h2>Impact That Matters</h2>
+      <p class="subtitle">At UragaNet Coffee, sustainability isn’t an option — it’s our foundation. We nurture our land, empower our farmers, and protect the future of Ethiopian coffee.</p>
+    </section>
+
+    <div class="grid">
+      <article class="i-card animate-on-scroll">
+        <i class='bx bx-leaf'></i>
+        <h3>Biodiversity</h3>
+        <p>We preserve Ethiopia’s natural ecosystem by promoting shade-grown coffee, planting native trees, and maintaining soil fertility across our farms and partner communities.</p>
+      </article>
+
+      <article class="i-card animate-on-scroll">
+        <i class='bx bx-water'></i>
+        <h3>Water Stewardship</h3>
+        <p>Our processing sites use water responsibly through efficient washing systems and eco-friendly filtration to minimize waste and protect local watersheds.</p>
+      </article>
+
+      <article class="i-card animate-on-scroll">
+        <i class='bx bx-group'></i>
+        <h3>Farmer Livelihoods</h3>
+        <p>We invest in our farmers through fair pricing, agronomy training, and pre-harvest support — building sustainable communities from seed to export.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Quality & Cupping Protocol ===== -->
+<section class="quality">
+  <div class="container">
+    <div class="q-wrap">
+      <div class="q-text animate-on-scroll">
+        <span class="tag">Quality Control</span>
+        <h2>Cupping & Lot Management</h2>
+        <ul class="checks">
+          <li><i class='bx bx-check-shield'></i> Careful hand-picking and floatation of ripe cherries to ensure top quality.</li>
+          <li><i class='bx bx-check-shield'></i> Continuous monitoring of moisture content and water activity during drying.</li>
+          <li><i class='bx bx-check-shield'></i> Consistent sample roasting using professional equipment (IKAWA / Probat) for accurate cupping results.</li>
+          <li><i class='bx bx-check-shield'></i> Strict SCA-standard cupping and blind evaluation to maintain flavor integrity.</li>
+          <li><i class='bx bx-check-shield'></i> Full lot traceability through QR tagging and warehouse-level quality control before export.</li>
+        </ul>
+      </div>
+      <div class="q-media animate-on-scroll">
+        <div class="lab-photo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Infrastructure & Capacity ===== -->
+<section class="infra">
+  <div class="container">
+    <section class="section-head animate-on-scroll">
+      <span class="tag">Infrastructure</span>
+      <h2>Capacity You Can Rely On</h2>
+    </section>
+    <div class="grid">
+      <article class="f-card animate-on-scroll">
+        <i class='bx bx-buildings'></i>
+        <h3>Wet Mills</h3>
+        <p>11 washing and dry processing sites across Uraga and surrounding regions, equipped with eco-pulpers and modern fermentation tanks for consistent quality.</p>
+      </article>
+      <article class="f-card animate-on-scroll">
+        <i class='bx bx-grid-alt'></i>
+        <h3>Drying Beds</h3>
+        <p>Raised beds at multiple processing sites, with daily rotation and canopy protection for optimal drying consistency and flavor development.</p>
+      </article>
+      <article class="f-card animate-on-scroll">
+        <i class='bx bx-archive'></i>
+        <h3>Warehousing</h3>
+        <p>Climate-controlled storage with moisture regulation, full lot separation, and traceability for all exported coffee.</p>
+      </article>
+      <article class="f-card animate-on-scroll">
+        <i class='bx bx-flask'></i>
+        <h3>Lab & QC</h3>
+        <p>Professional cupping labs with moisture meters, sample roasters (IKAWA/Probat), and trained graders to maintain SCA-standard quality control.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Timeline (History) ===== -->
+<section class="timeline">
+  <div class="container">
+    <section class="section-head animate-on-scroll">
+      <span class="tag">Our Journey</span>
+      <h2>Milestones</h2>
+    </section>
+
+    <div class="tl-grid">
+      <div class="tl-item animate-on-scroll">
+        <span class="year">2018</span>
+        <h4>Founders Enter Coffee Industry</h4>
+        <p>Gamachis Bali Jilo (PhD) and Faysel Abdosh Yonis begin their journey in specialty coffee, focusing on sustainable farming and high-quality Ethiopian beans.</p>
+      </div>
+      <div class="tl-item animate-on-scroll">
+        <span class="year">2022</span>
+        <h4>UragaNet Coffee Established</h4>
+        <p>UragaNet Coffee Plantation & Export PLC was founded with a vision to share Guji’s finest coffee with the world.</p>
+      </div>
+      <div class="tl-item animate-on-scroll">
+        <span class="year">2023</span>
+        <h4>Farmer Partnerships Expanded</h4>
+        <p>Collaborations with farmers across Uraga, Hambella, Haro Wolabu, West Arsi, Sidama, Yirgachefe, and Shakiso regions strengthen quality and traceability.</p>
+      </div>
+      <div class="tl-item animate-on-scroll">
+        <span class="year">2024/2025</span>
+        <h4>Global Export Launch</h4>
+        <p>UragaNet Coffee begins exporting Ethiopian specialty coffee internationally, introducing traceable systems and premium lot management.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Certifications & Compliance ===== -->
+<section class="certs">
+  <div class="container">
+    <section class="section-head animate-on-scroll">
+      <span class="tag">Compliance</span>
+      <h2>Certifications & Standards</h2>
+      <p class="subtitle">Our operations align with global quality, sustainability, and export standards.</p>
+    </section>
+    <div class="badge-row animate-on-scroll">
+      <div class="badge">SCA Practices</div>
+      <div class="badge">ISO-Aligned QC</div>
+      <div class="badge">Traceable Lots</div>
+      <div class="badge">Sustainability</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Map (Location) ===== -->
+<section class="map-section">
+  <div class="container">
+    <section class="section-head animate-on-scroll">
+      <span class="tag">Where We Work</span>
+      <h2>UragaNet Coffee — Guji, Ethiopia</h2>
+    </section>
+    <div class="map-embed animate-on-scroll">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.704340798948!2d38.8165325!3d8.907054600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b83f919095bad%3A0xd19604caa4b4e3df!2sUragaNet%20Coffee%20Plantation%20%26%20Export%20PLC!5e0!3m2!1sam!2set!4v1753799808364!5m2!1sam!2set"
+        width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="container animate-on-scroll">
+    <h2>Ready to Experience UragaNet Coffee?</h2>
+    <p>Request free samples or connect with our export team to discuss available lots.</p>
+    <div class="cta-row">
+      <a href="getproduct.php" class="btn primary"><i class='bx bx-package'></i> Get Samples</a>
+      <a href="ourproduct.php" class="btn ghost"><i class='bx bx-show'></i> View Products</a>
+    </div>
+  </div>
+</section>
+
+<footer class="amazing-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <img src="image/Uraga.png" alt="UragaNet Logo" class="footer-logo" />
+      <p class="inspiration">"Brewing change from seed to cup — every bean tells a story."</p>
+    </div>
+
+    <div class="footer-section visit">
+      <h4><i class='bx bx-calendar'></i> Book a Visit</h4>
+      <form>
+        <input type="date" name="visit-date" class="visit-date" />
+        <button type="submit" class="visit-btn">Reserve</button>
+      </form>
+    </div>
+
+    <div class="footer-section">
+      <h4><i class='bx bx-map'></i> Address</h4>
+      <p>Addis Ababa, Ethiopia</p>
+      <p><i class='bx bx-envelope'></i> info@uraganetcoffee.com</p>
+      <p><i class='bx bx-phone'></i> +251 911 593 684</p>
+    </div>
+
+    <div class="footer-section">
+      <h4><i class='bx bx-share-alt'></i> Connect With Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 UragaNet Coffee. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const answer = this.querySelector('.faq-answer');
+      if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        answer.style.display = 'none';
+      } else {
+        this.classList.add('active');
+        answer.style.display = 'block';
+      }
+    });
+  });
+});
+</script>
+<script src="script/app.js"></script>
+</body>
+</html>

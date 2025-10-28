@@ -1,0 +1,369 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style/style.css" />
+  <title>UragaNet Coffee Plantation and Export</title>
+  <link rel="stylesheet" href="/image/022 - Copy.png">
+</head>
+<body>
+  <div class="baner">
+    <header>
+      <div class="logo">
+       <a href="home.php"><img src="image/uraga.png" alt="UragaNet Coffee Logo" /></a> 
+      </div>
+      <nav class="navbar">
+      <div class="nav-links">
+          <a href="home.php">Home</a>
+          <a href="about.php">About</a>
+          <a href="ourproduct.php">Our Product</a>
+          <a href="getproduct.php">Get Sample</a>
+          <a href="gallery.php">Gallery</a>
+          <a href="contact.php">Contact</a>
+      </div>
+    </nav>
+      <div class="icon">
+  
+<i class='bx bx-cart-download'><span>(<?= isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>)</span>
+</i>
+
+        <div class="cart-icon">
+          <i class='bx bx-menu menu-icon' onclick="toggleMenu()"></i>
+        </div>
+       
+       
+      </div>
+    </header>
+<div class="hero" id="hero">
+  <video id="heroVideo" autoplay muted loop playsinline>
+    <source src="video/lv_0_20250916091711.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <div class="descri">
+      <h1>URAGA<span>NET </span> COFFEE <i class='bx bxs-coffee-bean'></i></span></h1>
+      <p>Born from the Land Where Coffee Began – A Journey of Flavor from Farm to Cup.</p>
+      <button>Get sample</button>
+      <div class="social-icons">
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-instagram-alt'></i>
+        <i class='bx bxl-tiktok'></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dots for hero change -->
+  <div class="dot-selectors">
+    <span class="dot active" data-bg="image/1.jpg" data-title="Ethiopian Legacy" data-desc="Experience the origin of coffee with a bold tradition."></span>
+    <span class="dot" data-bg="image/bk3.jpg" data-title="Forest Beans" data-desc="Naturally grown beans from our lush highlands."></span>
+  </div>
+    <div class="floating-icons">
+    <i class='bx bx-leaf icon'></i> 
+      <i class='bx bx-leaf icon'></i>  
+       <i class='bx bx-leaf icon'></i>
+  </div>
+</div>
+
+  <section class="company-description">
+  <div class="description-container">
+    
+    <div class="text-content">
+      <h1>Welcome to <span>UragaNet</span> Coffee</h1>
+      <h4>Brewing Ethiopia’s Finest Coffee Legacy</h4>
+      <p>
+  UragaNet Coffee was founded by Gamachis Bali Jilo (PhD) and Faysel Abdosh Yonis, CEO and owner of Testi Trading PLC. Our mission is to share the rich flavors of Ethiopian specialty coffee with the world, sourced from regions such as Guji, Yirgachefe, West Arsi, Sidama, Ilu, and Nekemte. The name "UragaNet" reflects our dedication to quality, community, and sustainable coffee production.
+</p>
+<p>
+  With deep roots in the Guji Highlands, we honor generations of coffee knowledge. From seed to cup, every step of our process is handled with care to ensure our coffee meets the highest standards of flavor and integrity.
+</p>
+<p>
+  We primarily source, process, and export premium coffee from Uraga and surrounding regions, focusing on traceability, farmer empowerment, and environmental sustainability.
+</p>
+
+
+      <div class="key-values">
+        <div class="value">
+          <i class='bx bxs-tree'></i>
+          <h5>Sustainability</h5>
+        </div>
+        <div class="value">
+          <i class='bx bxs-hand'></i>
+          <h5>Community</h5>
+        </div>
+        <div class="value">
+          <i class='bx bxs-award'></i>
+          <h5>Quality</h5>
+        </div>
+      </div>
+    </div>
+    <div class="image">
+      <img src="image/bk4.jpg" alt="UragaNet Coffee Team">
+    </div>
+  </div>
+</section>
+
+  
+    <section class="poster-section">
+  <div class="poster-overlay">
+    <div class="poster-content">
+      <div class="poster-image">
+        <img src="image/coffee-beans_9954764.png" alt="Coffee Poster">
+      </div>
+      <p class="poster-quote">“Great coffee begins with passion, care, and tradition.”</p>
+    </div>
+  </div>
+</section>
+
+    <section class="products">
+      <h2>Our Premium Coffee</h2>
+      <div class="product-cards">
+        <div class="card">
+          <img src="image/5.JPG" alt="Washed Coffee">
+          <h3>Washed <i class='bx bxs-droplet'></i></h3>
+          
+          <a href="getproduct.php"><button>Get Sample</button></a>
+        </div>
+        <div class="card">
+          <img src="image/6.jpg" alt="Natural Coffee">
+          <h3>Natural <i class='bx bxs-sun'></i></h3>
+       
+          <a href="getproduct.php"><button>Get Sample</button></a>
+        </div>
+        <div class="card">
+          <img src="image/4.jpg" alt="Anaerobic Fermented Coffee">
+          <h3>Anaerobic <i class='bx bxs-flask'></i></h3>
+          
+          <a href="getproduct.php"><button>Get Sample</button></a>
+        </div>
+        <div class="card">
+          <img src="image/honey.JPG" alt="Honey Processed Coffee">
+          <h3>Honey <i class='bx bxs-honey'></i></h3>
+         
+          <a href="getproduct.php"><button>Get Sample</button></a>
+        </div>
+      </div>
+    </section>
+    
+
+<section class="who-we-are">
+    <!-- Left Side -->
+    <div class="text-side">
+      <h2>Who We Are</h2>
+
+      <div class="info-box">
+        <h3>Variety of Coffee</h3>
+        <p>UragaNet cultivates distinct Ethiopian coffee varieties, each offering a unique flavor, aroma, and rich heritage from Guji.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>High-Quality Coffee</h3>
+        <p>Our beans grow at high altitudes, ensuring superior taste and aroma. Altitude, soil, and climate combine to create unmatched quality.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Origin</h3>
+        <p>As part of Ethiopia’s birthplace of coffee, UragaNet continues the centuries-old tradition of producing the world’s finest beans.</p>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="image-side">
+        <div class="diamonds"></div>
+  
+      <div class="diamond"></div>
+      <div class="diamondsmall"></div>
+    
+    </div>
+  </section>
+    
+
+<section class="timeline">
+  <h2>Our Journey</h2>
+  <div class="timeline-container">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2022</h3>
+        <p>UragaNet Coffee Plantation & Export was established with a vision to share the finest Ethiopian coffee, particularly from Guji.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2023</h3>
+        <p>Began expanding partnerships with farmers across Uraga, Hambella, Haro Wolabu, West Arsi, Sidama, Yirgachefe, and Shakiso regions.</p>
+      </div>
+      
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2024/5</h3>
+        <p>Launched our global export program, bringing Ethiopian coffee heritage to international markets.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <section class="owner-section">
+  <div class="owner-container">
+    
+    <!-- Owner Image -->
+    <div class="owner-image">
+      <img src="image/photo_2025-06-16_01-02-22 (2).jpg" alt="Dr. Gamachis Bali Jilo">
+    </div>
+
+    <!-- Owner Content -->
+    <div class="owner-content">
+      <h2>Meet Our Founders</h2>
+  <p>
+    <strong>Gamachis Bali Jilo (PhD)</strong> and <strong>Faysel Abdosh Yonis</strong> founded 
+    <strong>UragaNet Coffee Plantation and Export PLC</strong> with a shared passion for Ethiopian coffee and sustainable farming. 
+    Their vision is to bring the rich, authentic flavors of Guji and other Ethiopian regions to coffee lovers worldwide.
+  </p>
+  <p>
+    Committed to empowering farmers and preserving Ethiopia’s coffee heritage, the founders combine traditional expertise 
+    with modern practices to ensure exceptional quality from farm to cup.
+  </p>
+  <div class="owner-quote">
+    <p>“Coffee is not just a product; it is a heritage. We provide it from farm to cup!”</p>
+    <span>– The Founders</span>
+  </div>
+    </div>
+  </div>
+</section>
+      
+  <section class="testimonials-section">
+  <div class="testimonials-container">
+    <h2>What People Say About Us</h2>
+    <p class="subtitle">Our customers and partners share their experiences with UragaNet Coffee.</p>
+
+    <div class="testimonials-grid">
+
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          "UragaNet Coffee delivers some of the finest Ethiopian coffee I’ve ever tasted. 
+          The flavor is rich and authentic – truly world-class."
+        </p>
+        <div class="testimonial-author">
+          <img src="image/download (1).jpg" alt="Customer 1">
+          <div>
+            <h4>Michael Johnson</h4>
+            <span>Coffee Importer, USA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          "Their dedication to quality and sustainability is inspiring. 
+          We are proud to partner with UragaNet Coffee for our café chain."
+        </p>
+        <div class="testimonial-author">
+          <img src="image/download.jpg" alt="Customer 2">
+          <div>
+            <h4>Anna Müller</h4>
+            <span>Café Owner, Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          "From the farm to the cup, the process is handled with care. 
+          UragaNet Coffee represents the true heritage of Ethiopia."
+        </p>
+        <div class="testimonial-author">
+          <img src="image/download (2).jpg" alt="Customer 3">
+          <div>
+            <h4>Hiroshi Tanaka</h4>
+            <span>Roaster, Japan</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <section class="subscription-section">
+      <div class="subscription-content">
+        <h2>Stay Updated With UragaNet coffee Coffee</h2>
+        <p>Subscribe to receive the latest news, offers, and sample opportunities straight to your inbox.</p>
+        <form class="subscription-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+   <footer class="amazing-footer">
+  <div class="footer-container">
+
+    <!-- Logo & Inspiration -->
+    <div class="footer-section">
+      <img src="image/Uraga.png" alt="UragaNet Logo" class="footer-logo" />
+      <p class="inspiration">"Brewing change from seed to cup – every bean tells a story."</p>
+    </div>
+
+    <!-- Book a Visit -->
+    <div class="footer-section visit">
+      <h4><i class='bx bx-calendar'></i> Book a Visit</h4>
+      <form>
+        <input type="date" name="visit-date" class="visit-date" />
+        <button type="submit" class="visit-btn">Reserve</button>
+      </form>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-section">
+      <h4><i class='bx bx-map'></i> Address</h4>
+      <p>Addis Ababa, Ethiopia</p>
+      <p><i class='bx bx-envelope'></i> info@uraganetcoffee.com</p>
+      <p><i class='bx bx-phone'></i> +251911593684</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section">
+      <h4><i class='bx bx-share-alt'></i> Connect With Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 UragaNet Coffee. All rights reserved.</p>
+  </div>
+</footer>
+  </div>
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+  
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  <script src="script/app.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</body>
+</html>

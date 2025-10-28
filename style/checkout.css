@@ -1,0 +1,192 @@
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #000000, #434343);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    font-family: 'Georgia', serif;
+  }
+  header .logo img {
+
+    height: 110px;
+   
+  }
+
+  
+  header i {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  header span{
+    font-size: 16px;
+  }
+  
+  .icon {
+    display: none;
+  }
+header nav{
+    display: flex;
+
+}
+header nav li{
+    list-style: none;
+    padding: 16px;
+}
+header nav li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin-top: 115px;
+    padding: 25px;
+    background-color: #fdf8f3;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(80, 50, 20, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    color: #4b2e1e;
+  }
+  
+  .checkout-form h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #3c2415;
+  }
+  
+  .checkout-form label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #5b3b2a;
+  }
+  
+  .checkout-form input,
+  .checkout-form textarea,
+  .checkout-form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #d3c2b0;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fffaf7;
+    color: #3c2c21;
+  }
+  
+  .checkout-form input:focus,
+  .checkout-form textarea:focus,
+  .checkout-form select:focus {
+    border-color: #a97455;
+    outline: none;
+    background-color: #fffefc;
+  }
+  
+  .checkout-form button {
+    width: 100%;
+    padding: 10px;
+     background: linear-gradient(135deg, #ea580c, #f59e0b, #b45309);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .checkout-form button:hover {
+     background: linear-gradient(135deg, #ea580c, #f59e0b, #b45309);
+  }
+  
+  
+.footer {
+    background: linear-gradient(135deg, #000000, #434343);
+    color: #fff;
+    width: 100%;
+    padding: 60px 20px 30px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-column {
+    flex: 1 1 250px;
+  }
+  
+  .footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #fff;
+  }
+  
+  .footer-column p {
+    margin-bottom: 10px;
+  }
+  
+  .social-footer i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .social-footer i:hover {
+    color: #ffdd99;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+  }
+  
