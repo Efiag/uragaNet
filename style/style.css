@@ -266,7 +266,7 @@ text-transform: uppercase;
 .diamond {
   width: 330px;
   height: 310px;
-  background: url(/image/4.jpg) center/cover;
+  background: url(../image/4.jpg) center/cover;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   animation: float 6s infinite ease-in-out;
@@ -277,7 +277,7 @@ text-transform: uppercase;
   position: absolute;
   top: -150px;
   right: -60px;
-  background: url(/image/182135984_100778968853931_4121525248137264380_n.jpg) center/cover;
+  background: url(../image/182135984_100778968853931_4121525248137264380_n.jpg) center/cover;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   
@@ -288,7 +288,7 @@ text-transform: uppercase;
   position: absolute;
   bottom: -200px;
   right: -50px;
-  background: url(/image/pexels-michael-burrows-7125583.jpg) center/cover;
+  background: url(../image/pexels-michael-burrows-7125583.jpg) center/cover;
  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   
@@ -327,7 +327,7 @@ text-transform: uppercase;
 .poster-section {
   position: relative;
   height: 40vh; /* fixed height */
-background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)), url(/image/pexels-michael-burrows-7125583.jpg) center/cover;
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)), url(../image/pexels-michael-burrows-7125583.jpg) center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -524,7 +524,7 @@ flex-direction: column;
   height: 200px;
    top: 60px;
   left: 10px;
-  background: url("/image/4.jpg") center/cover;
+  background: url(../image/4.jpg) center/cover;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   animation: float 6s infinite ease-in-out;
@@ -535,7 +535,7 @@ flex-direction: column;
   position: absolute;
   top: 50px;
   left: 100px;
-  background: url(/image/182135984_100778968853931_4121525248137264380_n.jpg) center/cover;
+  background: url(../image/182135984_100778968853931_4121525248137264380_n.jpg) center/cover;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   
@@ -546,7 +546,7 @@ flex-direction: column;
   position: absolute;
   top: 60px;
   right: -150px;
-  background: url(/image/pexels-michael-burrows-7125583.jpg) center/cover;
+  background: url(../image/pexels-michael-burrows-7125583.jpg) center/cover;
  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   
@@ -1119,7 +1119,7 @@ flex-direction: column;
   }
 
   .parallax-cover {
-    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url(/image/1212.jpg);
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url(../image/1212.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -1173,7 +1173,7 @@ flex-direction: column;
     background-color: #a17033;
   }
   .subscription-section {
-    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url(/image/bk3.jpg);
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url(../image/bk3.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -1319,7 +1319,7 @@ background: linear-gradient(135deg, #0b1220, #1e293b);
   }
 
   .hero{
-    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url(/image/1.jpg);
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url(../image/1.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -1459,7 +1459,7 @@ height: 200px;
 .hero2{
   min-height: 30vh;
   margin-top: 80px;
-  background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url(/image/4.jpg);
+  background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url(../image/4.jpg);
   background-size: cover;
   background-position: bottom;
   color: white;
@@ -1499,7 +1499,7 @@ justify-content: center;
  
 }
 .product-sample{
-  background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url(/image/bk8.jpg);
+  background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.84)),url(../image/bk8.jpg);
     background-size: cover;
   background-position: center;
   padding: 70px;
