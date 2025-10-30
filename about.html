@@ -17,16 +17,16 @@
   <div class="logo">
     <a href="home.php"><img src="image/uraga.png" alt="UragaNet Coffee Logo" /></a>
   </div>
-  <nav class="navbar">
-    <div class="nav-links">
-      <a href="home.php">Home</a>
-      <a href="about.php">About</a>
-      <a href="ourproduct.php">Our Product</a>
-      <a href="getproduct.php">Get Sample</a>
-      <a href="gallery.php">Gallery</a>
-      <a href="contact.php">Contact</a>
-    </div>
-  </nav>
+      <nav class="navbar">
+      <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="ourproduct.html">Our Product</a>
+          <a href="getproduct.html">Get Sample</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+      </div>
+    </nav>
   <div class="icon">
     <i class='bx bx-cart-download'><span>(<?= isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>)</span></i>
     <div class="cart-icon">
@@ -280,6 +280,60 @@
     </div>
   </div>
 </section>
+<section class="global-promise">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Our Global Promise</span>
+      <h2>Delivering Ethiopia’s Coffee Excellence Worldwide</h2>
+      <p class="subtitle">
+        UragaNet connects the world’s finest coffee farms to global markets, ensuring freshness, quality, and sustainability.
+      </p>
+    </div>
+
+    <div class="gp-grid">
+      <div class="gp-card fade">
+        <h3>Environmental Stewardship</h3>
+        <p>We advocate for sustainable farming that safeguards ecosystems.</p>
+      </div>
+      <div class="gp-card fade">
+        <h3>Climate Resilience</h3>
+        <p>Empowering farmers with tools to adapt to a changing climate.</p>
+      </div>
+      <div class="gp-card fade">
+        <h3>Ethical Supply Chains</h3>
+        <p>We ensure transparency, fairness, and dignity in every partnership.</p>
+      </div>
+      <div class="gp-card fade">
+        <h3>Uncompromising Quality</h3>
+        <p>Relentlessly improving to meet the highest international standards.</p>
+      </div>
+      <div class="gp-card fade">
+        <h3>Market Stability</h3>
+        <p>Helping partners navigate fluctuations with insight and analysis.</p>
+      </div>
+      <div class="gp-card fade">
+        <h3>Wellness & Choice</h3>
+        <p>Curating coffee that meets modern, health-conscious lifestyles.</p>
+      </div>
+      <div class="gp-card fade">
+        <h3>Innovation</h3>
+        <p>Embracing technology to refine every step from farm to cup.</p>
+      </div>
+      <div class="gp-card fade">
+        <h3>Evolving Tastes</h3>
+        <p>Anticipating and shaping coffee culture through creativity.</p>
+      </div>
+    </div>
+
+    <div class="gp-footer fade">
+      <h3>A Responsible Future for Coffee</h3>
+      <p>
+        We fight deforestation, reduce carbon emissions, and support fair trade —
+        creating a sustainable and just coffee industry for all.
+      </p>
+    </div>
+  </div>
+</section>
 
 <!-- ===== Map (Location) ===== -->
 <section class="map-section">
@@ -363,6 +417,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  fadeElements.forEach((el) => observer.observe(el));
+});
+
 </script>
 <script src="script/app.js"></script>
 </body>

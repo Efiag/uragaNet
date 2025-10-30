@@ -1949,6 +1949,7 @@ textarea {
   height: 500px;
   margin-bottom: 30px;
 }
+
 @media (max-width: 992px) {
   .testimonials-grid {
     grid-template-columns: 1fr 1fr;
